@@ -1,8 +1,9 @@
 import sqlite3
 from typing import List, Dict, Optional, Any
 from datetime import datetime, date, timedelta, timezone
+import os
 
-DB_PATH = "tamilschool.db"
+DB_PATH = os.path.join(os.path.dirname(__file__), "tamilschool.db")
 
 CREATE_VOLUNTEERS_SQL = """
 CREATE TABLE IF NOT EXISTS volunteers (
